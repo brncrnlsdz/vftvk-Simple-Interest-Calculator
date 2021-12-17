@@ -6,10 +6,28 @@ function compute()
     var year = document.getElementById("years").value;
     var interest = principal * years * rate /100;
     var year = new Date().getFullYear()+parseInt(years);
-
+    result_years = new Date().getFullYear() + Number(years);
+    result_interest = Number((principal*years*rate)/100);
+    document.getElementById('result_principal').innerHTML = principal;
+    document.getElementById('result_rate').innerHTML = rate;
+    document.getElementById('result_years').innerHTML = result_years;
+    document.getElementById('result_interest').innerHTML = result_interest;
 }
-function updateRate() 
+function check()
 {
-    var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval;
-}    
+  var principal = document.getElementById('principal');
+
+    if (principal.value <= 0){
+        alert("Enter a positive number");
+        principal.focus();
+        return false;
+    }
+}
+function listen ()
+{
+  document.querySelector('button').addEventListener('click', () => {
+      check ();
+      compute();
+});
+}
+document.addEventListener('DOMContentLoaded', listen);
