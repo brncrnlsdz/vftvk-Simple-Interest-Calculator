@@ -1,19 +1,22 @@
 function compute()
 {
-    var principal = document.getElementById("principal").value;
-    var rate = document.getElementById("rate").value;
-    var years = document.getElementById("years").value;
-    var year = new Date().getFullYear()+parseInt(years);
-    var interest = principal * years * rate /100;
-	
-
-    function updateRate() 
-{
-    var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval;
-
-}
- document.getElementById("result").innerHTML="If you deposit "+principal+",\<br\>at an interest rate of "+rate+"%\<br\>You will receive an amount of "+interest+",\<br\>in the year "+year+"\<br\>"
+    var principal =Number( document.getElementById("principal").value);
+    if(principal<=0){
+        alert("Enter a positive number");
+        document.getElementById("principal").focus();
+        return ;
+    }
+       
+    var rate=Number(document.getElementById("rate").value);
+    var year=Number(document.getElementById("Years").value);
+    var interest=principal*rate*year/100.0;
    
+    var noy=2021+year;
+    document.getElementById("result").innerHTML="If you deposit <mark>"+principal+"</mark>,<br>at an interest rate of <mark>"+rate+"</mark>.<br>You will receive an amount of <mark>"+interest+"</mark>,<br>in the year <mark>"+noy+"</mark><br/>";
+}
 
+function calrange(){
+    var current=Number(document.getElementById("rate").value);
+    document.getElementById("disp").innerHTML=current.toString()+"%";
+    
 }

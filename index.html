@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <title>Simple Interest Calculator</title>
     <head>
+        <title>Web App – Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="maindiv">
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="range"  id="rate" min="1" max="20" value="10.25"><br/>
-        <span id="rate_val" onchange="updateRate()" >	
-		
-        </span>
-        No. of Years <select id="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            </select>
-
-        <span id="result"></span><br>
-
+        <h1><strong>Simple Interest Calculator</strong> </h1>
+         <div class="mid">
+        <label><strong>Amount</strong> </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  
+        <input type="number"  id="principal">  <br/>
+        <br/>
+        <label ><strong>Interest rate</strong> </label> &nbsp;&nbsp;
+        <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25"onchange="calrange()" ><span  id="disp">10.25%</span> <br/>
+        <br/>
+        <label ><strong>No. of Years  </strong></label> &nbsp;&nbsp;&nbsp;&nbsp; 
+        <select name="cars" id="Years">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </select>  <br/><br/>
         <button onclick="compute()">Compute Interest</button>
-        <span id="result"></span>
-        </div>
+        <br/><br/>
+       <span id="result"></span><br>
     </body>
     <footer>
-      Ⓒ Everyone Can Get Rich
-    </footer>
+        &#169; Everyone Can Get Rich    
+    </footer> 
 </html>
