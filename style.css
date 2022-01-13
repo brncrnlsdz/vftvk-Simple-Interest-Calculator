@@ -1,19 +1,9 @@
-body {background-color:tan;}
-h1 {color:green;}
-body {
-    background-color:black;
-    font: Arial;
-    color: white;
-}
-h1 {color:grey;
-    font-family:verdana
-}
-
-.maindiv {
-    background-color: white;
+body {background-color:black;font-family:arial;color:white}
+h1{color:gray;font-family:verdana}
+.maindiv{
+    background-color:white;
     color:black;
-    width: 300px;
-    padding: 20px;
-    border-radius: 25px;
-    box-align: center;
+    width:400px;
+    border-radius:25px;
+    box-align:center;
 }
